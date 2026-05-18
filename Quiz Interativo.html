@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Quiz - Educação Inclusiva</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg, #0f8f3d, #ffffff);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px 20px;
+    }
+
+    .quiz{
+      width:100%;
+      max-width:850px;
+      background:white;
+      border-radius:24px;
+      padding:40px;
+      border-top:12px solid #c1121f;
+      box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .titulo{
+      text-align:center;
+      margin-bottom:35px;
+    }
+
+    .titulo h1{
+      color:#c1121f;
+      font-size:2.3rem;
+      margin-bottom:10px;
+    }
+
+    .titulo p{
+      color:#0f8f3d;
+      font-size:1rem;
+      font-weight:600;
+    }
+
+    .pergunta{
+      margin-bottom:28px;
+      padding:22px;
+      background:#f7f7f7;
+      border-left:6px solid #0f8f3d;
+      border-radius:16px;
+      transition:0.3s;
+    }
+
+    .pergunta:hover{
+      transform:translateY(-2px);
+    }
+
+    .pergunta h2{
+      font-size:1.1rem;
+      color:#c1121f;
+      margin-bottom:18px;
+    }
+
+    .alternativa{
+      display:block;
+      margin-bottom:12px;
+      background:white;
+      padding:12px 15px;
+      border-radius:12px;
+      border:2px solid transparent;
+      cursor:pointer;
+      transition:0.2s;
+    }
+
+    .alternativa:hover{
+      border-color:#0f8f3d;
+      background:#eefaf2;
+    }
+
+    .alternativa input{
+      margin-right:10px;
+      accent-color:#c1121f;
+    }
+
+    .botao{
+      width:100%;
+      padding:16px;
+      border:none;
+      border-radius:14px;
+      background:#c1121f;
+      color:white;
+      font-size:1rem;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+      margin-top:20px;
+    }
+
+    .botao:hover{
+      background:#970d18;
+    }
+
+    .resultado{
+      display:none;
+      margin-top:35px;
+      background:#0f8f3d;
+      color:white;
+      padding:25px;
+      border-radius:18px;
+      text-align:center;
+    }
+
+    .resultado h3{
+      margin-bottom:10px;
+      font-size:1.6rem;
+    }
+
+    .resultado p{
+      font-size:1.1rem;
+      line-height:1.6;
+    }
+
+    @media(max-width:700px){
+
+      .quiz{
+        padding:25px;
+      }
+
+      .titulo h1{
+        font-size:1.8rem;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="quiz">
+
+    <div class="titulo">
+      <h1>🎯 Quiz Interativo</h1>
+      <p>Educação Inclusiva na Prática</p>
+    </div>
+
+    <!-- PERGUNTA 1 -->
+    <section class="pergunta">
+      <h2>1. O que é educação inclusiva?</h2>
+
+      <label class="alternativa">
+        <input type="radio" name="q1" value="A">
+        A) Ensino apenas para alunos com deficiência
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q1" value="B">
+        B) Ensino separado por níveis de aprendizagem
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q1" value="C">
+        C) Ensino que garante participação de todos os alunos
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q1" value="D">
+        D) Ensino apenas com uso de tecnologia
+      </label>
+    </section>
+
+    <!-- PERGUNTA 2 -->
+    <section class="pergunta">
+      <h2>2. Qual é um exemplo de prática pedagógica inclusiva?</h2>
+
+      <label class="alternativa">
+        <input type="radio" name="q2" value="A">
+        A) Aplicar a mesma atividade sem adaptação
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q2" value="B">
+        B) Usar diferentes formas de ensinar o conteúdo
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q2" value="C">
+        C) Ignorar dificuldades dos alunos
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q2" value="D">
+        D) Avaliar todos da mesma forma
+      </label>
+    </section>
+
+    <!-- PERGUNTA 3 -->
+    <section class="pergunta">
+      <h2>3. Por que adaptar atividades é importante?</h2>
+
+      <label class="alternativa">
+        <input type="radio" name="q3" value="A">
+        A) Para facilitar o trabalho do professor
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q3" value="B">
+        B) Para ocupar o tempo dos alunos
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q3" value="C">
+        C) Para garantir a participação e aprendizagem de todos
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q3" value="D">
+        D) Para reduzir o conteúdo
+      </label>
+    </section>
+
+    <!-- PERGUNTA 4 -->
+    <section class="pergunta">
+      <h2>4. O que é tecnologia assistiva?</h2>
+
+      <label class="alternativa">
+        <input type="radio" name="q4" value="A">
+        A) Qualquer tecnologia usada na escola
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q4" value="B">
+        B) Recursos que auxiliam pessoas com deficiência
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q4" value="C">
+        C) Apenas computadores
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q4" value="D">
+        D) Jogos digitais
+      </label>
+    </section>
+
+    <!-- PERGUNTA 5 -->
+    <section class="pergunta">
+      <h2>5. Qual atitude contribui para inclusão em sala?</h2>
+
+      <label class="alternativa">
+        <input type="radio" name="q5" value="A">
+        A) Ignorar diferenças
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q5" value="B">
+        B) Promover respeito e diálogo
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q5" value="C">
+        C) Separar alunos por dificuldade
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q5" value="D">
+        D) Aplicar punições
+      </label>
+    </section>
+
+    <!-- PERGUNTA 6 -->
+    <section class="pergunta">
+      <h2>6. O que significa acessibilidade?</h2>
+
+      <label class="alternativa">
+        <input type="radio" name="q6" value="A">
+        A) Ter apenas rampas na escola
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q6" value="B">
+        B) Garantir acesso físico, pedagógico e comunicacional
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q6" value="C">
+        C) Usar apenas livros digitais
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q6" value="D">
+        D) Reduzir conteúdos
+      </label>
+    </section>
+
+    <!-- PERGUNTA 7 -->
+    <section class="pergunta">
+      <h2>7. Como os colegas podem ajudar na inclusão?</h2>
+
+      <label class="alternativa">
+        <input type="radio" name="q7" value="A">
+        A) Ignorando o colega
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q7" value="B">
+        B) Fazendo as atividades por ele
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q7" value="C">
+        C) Respeitando e colaborando
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q7" value="D">
+        D) Evitando contato
+      </label>
+    </section>
+
+    <!-- PERGUNTA 8 -->
+    <section class="pergunta">
+      <h2>8. O que é adaptação curricular?</h2>
+
+      <label class="alternativa">
+        <input type="radio" name="q8" value="A">
+        A) Retirar conteúdos do aluno
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q8" value="B">
+        B) Mudar o currículo da escola inteira
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q8" value="C">
+        C) Ajustar atividades conforme necessidades do aluno
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q8" value="D">
+        D) Aplicar provas mais fáceis para todos
+      </label>
+    </section>
+
+    <!-- PERGUNTA 9 -->
+    <section class="pergunta">
+      <h2>9. A inclusão beneficia quem?</h2>
+
+      <label class="alternativa">
+        <input type="radio" name="q9" value="A">
+        A) Apenas alunos com deficiência
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q9" value="B">
+        B) Apenas professores
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q9" value="C">
+        C) Todos os alunos
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q9" value="D">
+        D) Apenas a escola
+      </label>
+    </section>
+
+    <!-- PERGUNTA 10 -->
+    <section class="pergunta">
+      <h2>10. Qual é um exemplo de avaliação inclusiva?</h2>
+
+      <label class="alternativa">
+        <input type="radio" name="q10" value="A">
+        A) Prova única para todos
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q10" value="B">
+        B) Avaliação apenas escrita
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q10" value="C">
+        C) Permitir diferentes formas de resposta
+      </label>
+
+      <label class="alternativa">
+        <input type="radio" name="q10" value="D">
+        D) Avaliar somente com nota
+      </label>
+    </section>
+
+    <button class="botao" onclick="verResultado()">
+      Ver Resultado
+    </button>
+
+    <div class="resultado" id="resultado">
+      <h3 id="pontuacao"></h3>
+      <p id="mensagem"></p>
+    </div>
+
+  </main>
+
+  <script>
+
+    function verResultado(){
+
+      let respostas = {
+        q1: "C",
+        q2: "B",
+        q3: "C",
+        q4: "B",
+        q5: "B",
+        q6: "B",
+        q7: "C",
+        q8: "C",
+        q9: "C",
+        q10: "C"
+      };
+
+      let acertos = 0;
+
+      for(let pergunta in respostas){
+
+        let respostaUsuario =
+          document.querySelector(`input[name="${pergunta}"]:checked`);
+
+        if(
+          respostaUsuario &&
+          respostaUsuario.value === respostas[pergunta]
+        ){
+          acertos++;
+        }
+
+      }
+
+      let mensagemFinal = "";
+
+      if(acertos >= 8){
+        mensagemFinal =
+          "🌟 Você já compreende muito bem a inclusão!";
+      }
+
+      else if(acertos >= 5){
+        mensagemFinal =
+          "👍 Está no caminho certo!";
+      }
+
+      else{
+        mensagemFinal =
+          "📘 Hora de aprender mais sobre inclusão!";
+      }
+
+      document.getElementById("resultado").style.display = "block";
+
+      document.getElementById("pontuacao").innerHTML =
+        `Você acertou ${acertos} de 10 questões`;
+
+      document.getElementById("mensagem").innerHTML =
+        mensagemFinal;
+    }
+
+  </script>
+
+</body>
+</html>
